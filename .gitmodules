@@ -1,3 +1,6 @@
 [submodule "StereoBM_repo"]
 	path = StereoBM_repo
 	url = https://github.com/redpower1998/StereoBM
+[submodule "taskonomy"]
+	path = taskonomy
+	url = https://github.com/StanfordVL/taskonomy
