@@ -17,7 +17,4 @@ In short:
 **Results**:
 Here is the video showing the results:
 
-<video width="600" controls>
-  <source src="Results-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Watch the video](Results-video.mp4)
