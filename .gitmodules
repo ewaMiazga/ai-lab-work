@@ -4,3 +4,6 @@
 [submodule "taskonomy"]
 	path = taskonomy
 	url = https://github.com/StanfordVL/taskonomy
+[submodule "Open3D_repo"]
+	path = Open_3D/Open3D_repo
+	url = https://github.com/isl-org/Open3D
