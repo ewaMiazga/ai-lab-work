@@ -167,3 +167,6 @@ datasets/
 
 # Configurations
 .vscode/
+
+# data folder
+data/
