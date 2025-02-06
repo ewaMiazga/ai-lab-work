@@ -1,7 +1,7 @@
 import cv2
 import torch
 import numpy as np
-import time
+import os
 
 # Load a MiDaS model for depth estimation
 model_type = "DPT_Large"     # MiDaS v3 - Large     (highest accuracy, slowest inference speed)
@@ -24,7 +24,10 @@ else:
     transform = midas_transforms.small_transform
 
 # Load the image
-img_path = "../dataset/cube_resized.jpg"
+DIR = "../dataset/"
+#img_path = f"{DIR}cube_resized.jpg"
+img_path = f"{DIR}books.png"
+img_path = f"{DIR}mashroom.jpg"
 img = cv2.imread(img_path)
 
 # Convert the image to RGB
@@ -54,11 +57,12 @@ depth_map_8bit = (depth_map * 255).astype(np.uint8)
 depth_map_colored = cv2.applyColorMap(depth_map_8bit, cv2.COLORMAP_MAGMA)
 
 # Save the depth map
-cv2.imwrite("cube_resized_depth_map.png", depth_map_8bit)
-cv2.imwrite("cube_resized_depth_map_colored.png", depth_map_colored)
+cv2.imwrite(f"{os.path.splitext(img_path)[0]}_depth_map.png", depth_map_8bit)
+#cv2.imwrite("cube_resized_depth_map_colored.png", depth_map_colored)
 
 # Display the image and depth map
-cv2.imshow('Image', cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
-cv2.imshow('Depth Map', depth_map_colored)
-cv2.waitKey(0)
+#cv2.imshow('Image', cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
+#cv2.imshow('Depth Map', depth_map_colored)
+#cv2.waitKey(0)
 cv2.destroyAllWindows()
+print("Script completed successfully.")
