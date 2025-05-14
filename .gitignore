@@ -171,3 +171,4 @@ datasets/
 # data folder
 data/
 control_points/ 
+curvature_figs*
