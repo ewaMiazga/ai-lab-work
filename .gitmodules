@@ -1,0 +1,3 @@
+[submodule "submodules/schneider"]
+	path = submodules/schneider
+	url = https://github.com/volkerp/fitCurves.git
